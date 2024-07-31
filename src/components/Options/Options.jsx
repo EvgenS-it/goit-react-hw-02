@@ -41,6 +41,7 @@ const Options = ({ updateFeedback, resetFeedback, totalFeedback }) => {
 Options.propTypes = {
   updateFeedback: PropTypes.func,
   totalFeedback: PropTypes.number,
+  resetFeedback: PropTypes.func,
 };
 
 export default Options;

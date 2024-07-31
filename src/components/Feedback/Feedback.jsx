@@ -19,6 +19,7 @@ Feedback.propTypes = {
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
   totalFeedback: PropTypes.number,
+  positiveFeedback: PropTypes.number,
 };
 
 export default Feedback;
