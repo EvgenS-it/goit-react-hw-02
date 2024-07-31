@@ -1,3 +1,4 @@
+// App.jsx
 import { useState } from 'react';
 import './App.css';
 import Description from './Description/Description';
@@ -32,16 +33,25 @@ function App() {
     feedbackTypes.good + feedbackTypes.neutral + feedbackTypes.bad;
   console.log(`totalFeedback ${totalFeedback}`);
 
+  const positiveFeedback = Math.round(
+    (feedbackTypes.good / totalFeedback) * 100
+  );
+
   return (
     <>
       <Description />
-      <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} />
+      <Options
+        updateFeedback={updateFeedback}
+        resetFeedback={resetFeedback}
+        totalFeedback={totalFeedback}
+      />
       {totalFeedback ? (
         <Feedback
           good={feedbackTypes.good}
           neutral={feedbackTypes.neutral}
           bad={feedbackTypes.bad}
           totalFeedback={totalFeedback}
+          positiveFeedback={positiveFeedback}
         />
       ) : (
         <Notification />

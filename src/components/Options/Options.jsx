@@ -1,8 +1,10 @@
+// Options.jsx
 import css from './Options.module.css';
 import PropTypes from 'prop-types';
 
 const Options = ({ updateFeedback, resetFeedback, totalFeedback }) => {
   const { container, btn } = css;
+
   return (
     <div className={container}>
       <button
@@ -27,7 +29,7 @@ const Options = ({ updateFeedback, resetFeedback, totalFeedback }) => {
         Bad
       </button>
 
-      {totalFeedback && (
+      {totalFeedback > 0 && (
         <button type="button" className={btn} onClick={resetFeedback}>
           Reset
         </button>
