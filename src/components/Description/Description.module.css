@@ -1,8 +1,19 @@
 .container {
+  margin-bottom: 15px;
 }
 
 .title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 105%;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
 }
 
 .text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 105%;
+  letter-spacing: -0.03em;
+  margin-bottom: 100px;
 }
